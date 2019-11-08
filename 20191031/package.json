@@ -1,0 +1,14 @@
+{
+  "name": "20191031",
+  "version": "1.0.0",
+  "description": "## 1. 문제 :  주어진 정수를 문자열로 변환. - 주어진 숫자는 정수이다( 0<a ) - int를 어떻게 str으로 변환할까",
+  "main": "int2str.test.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}
