@@ -1,2 +1,2 @@
 # dailyKata
-this is for recording what I studied about algorithm and practicing git
+this is for recording that I studied about various algorithm and practicing git
