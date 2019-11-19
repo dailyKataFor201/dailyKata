@@ -1,4 +1,4 @@
-#문제 : K 번째 수
+# 문제 : K 번째 수
 
 배열 array의 i번째 숫자부터 j번째 숫자까지 자르고 정렬했을 때, k번째에 있는 수를 구하려 합니다.
 
@@ -19,3 +19,17 @@ commands의 각 원소는 길이가 3입니다.
 array : [1, 5, 2, 6, 3, 7, 4]
 commands : [[2, 5, 3], [4, 4, 1], [1, 7, 3]]
 return : [5, 6, 3]
+
+## 1. understanding
+- var array has an array including integer elements.
+- commands has an array including arrays what has var i = start ,j = end, k = number
+- JS has slice function to seperate array
+- JS has sort function to sort something with string, so we need to use modify for integer
+- we will use map function for solve this problem.
+## 2. plan
+- Use map for commands.
+- slice array with Var start and end  from command and sort.
+- get the index = k from sorted array.
+
+## 3. coding
+## 4. review
