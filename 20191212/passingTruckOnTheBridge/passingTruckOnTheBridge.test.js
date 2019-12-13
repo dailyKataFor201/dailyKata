@@ -19,67 +19,28 @@ const getMinSecond = (length, limit, truck_weights) => {
     let count = 0;
 
     while(true){
-        // console.log("몇회")
         if (bridge.length == 0 && truck_weights.length == 0) return count + 1;
 
         if (getWeightsOnTheBridge(bridge) + truck_weights[0] <= limit) {
             bridge.push([truck_weights.shift(),0]);
-            // console.log("입력 ",count," : ",bridge);
         }
         
         for (let i = 0; i < bridge.length; i++) {
             bridge[i] = [bridge[i][0],bridge[i][1]+1];
-            
         }
-        // console.log("시간 증가 ",count," : ",bridge);
-        
-        // console.log(count," : ",bridge);
+
         if(bridge[0][1] === length){
             bridge.shift();
-            // console.log("출력 ",count," : ",bridge);
         }
+
         count++;
-        // console.log("카운트 증가 ",count);
     }
-
-
-    
-
-
-    // if (bridge.length == 0 && truck_weights.length == 0) return count + 1;
-
-    // if (getWeightsOnTheBridge(bridge) + truck_weights[0] <= limit) {
-    //     bridge.push([truck_weights.shift(),0]);
-    // }
-    // count++;
-    // for (let i = 0; i < bridge.length; i++) {
-    //     bridge[i] = [bridge[i][0],bridge[i][1]+1];
-    // }
-    // if(bridge[0][1]===limit){
-    //     bridge.shift();
-    // }
-
-    // if (bridge.length == 0 && truck_weights.length == 0) return count + 1;
-
-    // if (getWeightsOnTheBridge(bridge) + truck_weights[0] <= limit) {
-    //     bridge.push([truck_weights.shift(),0]);
-    // }
-    // count++;
-    // for (let i = 0; i < bridge.length; i++) {
-    //     bridge[i] = [bridge[i][0],bridge[i][1]+1];
-    // }
-    // if(bridge[0][1]===limit){
-    //     bridge.shift();
-    // }
-    
-
 }
 
 const getWeightsOnTheBridge = (bridge) =>
     bridge.length == 0 ? 0 : bridge.reduce((acc, cur) => acc + cur[0], 0)
 
 
-// [7][7][4][4]
 test('getMinSecond', () => {
     expect(getMinSecond(1, 1, [1])).toBe(2);
     expect(getMinSecond(1, 1, [1,1])).toBe(3);
