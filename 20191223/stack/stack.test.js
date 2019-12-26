@@ -1,6 +1,4 @@
-class stack {
-    
-}
+
 
 test('stask should create empty stack', () => {
     const stack = new stack();
