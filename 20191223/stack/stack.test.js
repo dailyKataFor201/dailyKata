@@ -1,4 +1,5 @@
 
+
 test('stask should create empty stack', () => {
     const stack = new stack();
     expect(stack).not.toBeNull();
