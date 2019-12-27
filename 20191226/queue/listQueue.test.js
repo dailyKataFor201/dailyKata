@@ -5,86 +5,130 @@
 
 class Queue {
     constructor() {
-        this.head = undefined;
+        this.head = null;
     }
-    enqueue(value) {
-        // if (this.head == undefined) {
-        //     const node = Node;
-        //     node.value = value;
-        //     this.head = node;
-        // }
-        // else {
-        //     let head = this.head;
-        //     while (head.next != undefined) {
-        //         head = head.next
-        //     }
 
-        //     const node = Node;
-        //     node.value = value;
-        //     head.next = node;
-        // }
+    getHead(){
+        return this.head;
     }
+    setHead(node){
+        this.head = node;
+    }
+
+    enqueue(value) {
+        if (this.getHead() == null) {
+            this.setHead(new Node(value));
+        }
+        else {
+            let head = this.getHead();
+            while (head.next != null) {
+                head = head.next
+            }
+            head.setNext(new Node(value));
+        }
+    }
+
+    dequeue(){
+        const tmp = this.getHead();
+        this.head = this.getHead().getNext();
+        return tmp.getValue();
+    }
+
     tail() {
-        return 1;
+        let head = this.getHead();
+        while(head.getNext() != null) {
+            head = head.getNext();
+        }
+        return head.getValue();
     }
+
     size() {
         let count = 0;
-        let head = this.head
-        while (head != undefined) {
-            head = head.next;
+        let head = this.getHead()
+        while (head != null) {
+            head = head.getNext();
             count++;
         }
         return count;
     }
 }
 
-const Node = { value: undefined, next: undefined }
+class Node {
+    constructor(value) {
+        this.value = value;
+        this.next = null;
+    }
 
+    setNext(node){
+        this.next = node;
+    }
+
+    getNext(){
+        return this.next;
+    }
+
+    getValue(){
+        return this.value;
+    }
+    
+}
 describe('queue is', () => {
     test('not empty', () => {
         const queue = new Queue();
         expect(queue).not.toBeNull();
     })
 
-    test('queue enqueue', () => {
+    test('possible to enqueue', () => {
         const queue = new Queue();
         queue.enqueue(1);
         expect(queue.tail()).toBe(1);
+        expect(queue.size()).toBe(1);
+        queue.enqueue(2);
+        expect(queue.tail()).toBe(2);
+        expect(queue.size()).toBe(2);
     })
 
-    test('get size', () => {
+    test('possible to dequeue', () => {
         const queue = new Queue();
         queue.enqueue(1);
         expect(queue.size()).toBe(1);
+        expect(queue.dequeue()).toBe(1);
+        expect(queue.size()).toBe(0);
         queue.enqueue(1);
+        queue.enqueue(2);
+        queue.enqueue(3);
+        queue.enqueue(4);
+        expect(queue.size()).toBe(4);
+        expect(queue.dequeue()).toBe(1);
+        expect(queue.size()).toBe(3);
+    })
+
+    test('possible to get size', () => {
+        const queue = new Queue();
+        queue.enqueue(1);
+        expect(queue.size()).toBe(1);
+        queue.enqueue(2);
         expect(queue.size()).toBe(2);
     })
 })
 
-describe('Node is', () => {
+describe.skip('Node can', () => {
+    
     test('not empty', () => {
-        expect(Node).not.toBeNull();
-        expect(Node.value).toBe(undefined);
+        const node = new Node();
+        expect(node).not.toBeNull();
+        expect(node.getValue()).toBe(null);
     })
 
-    test('has value', () => {
-        const node = Node;
-
-        node.value = 4;
-        expect(node.value).toBe(4);
-    })
 
     test('has next', () => {
-        const node = Node;
-        node.value = 1;
+        const node = new Node(1);
 
-        const newNode = Node;
-        newNode.value = 2;
+        const newNode = new Node(2);
 
-        node.next = newNode;
+        node.setNext(newNode);
 
-        expect(node.next.value).toBe(2);
+        expect(node.getNext().getValue()).toBe(2);
     })
 
 })
-
