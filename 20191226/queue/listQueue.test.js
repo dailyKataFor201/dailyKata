@@ -5,18 +5,11 @@
 
 class Queue {
     constructor() {
-        this.head = null;
-    }
-
-    getHead(){
-        return this.head;
-    }
-    setHead(node){
-        this.head = node;
+        this.head = new List();
     }
 
     enqueue(value) {
-        if (this.getHead() == null) {
+        if (this.list.getHead() == null) {
             this.setHead(new Node(value));
         }
         else {
@@ -28,7 +21,7 @@ class Queue {
         }
     }
 
-    dequeue(){
+    dequeue() {
         const tmp = this.getHead();
         this.head = this.getHead().getNext();
         return tmp.getValue();
@@ -36,7 +29,7 @@ class Queue {
 
     tail() {
         let head = this.getHead();
-        while(head.getNext() != null) {
+        while (head.getNext() != null) {
             head = head.getNext();
         }
         return head.getValue();
@@ -44,12 +37,16 @@ class Queue {
 
     size() {
         let count = 0;
-        let head = this.getHead()
+        let head = this.getHead();
         while (head != null) {
             head = head.getNext();
             count++;
         }
         return count;
+    }
+
+    isEmpty() {
+        return this.size() == 0;
     }
 }
 
@@ -59,19 +56,40 @@ class Node {
         this.next = null;
     }
 
-    setNext(node){
+    setNext(node) {
         this.next = node;
     }
 
-    getNext(){
+    getNext() {
         return this.next;
     }
 
-    getValue(){
+    getValue() {
         return this.value;
     }
-    
 }
+
+describe('Queue', () => {
+    describe('Create queue', () => {
+        it('returns empty queue', () => {
+            const queue = new Queue();
+            expect(queue.isEmpty()).toBe(true);
+        });
+    });
+
+    describe('Enqueue', () => {
+        it('increases size of Queue', () => {
+            const queue = new Queue();
+
+            const originSize = queue.size();
+
+            queue.enqueue(1);
+
+            expect(queue.size() - originSize).toBe(1);
+        })
+    });
+});
+
 describe('queue is', () => {
     test('not empty', () => {
         const queue = new Queue();
@@ -94,6 +112,7 @@ describe('queue is', () => {
         expect(queue.size()).toBe(1);
         expect(queue.dequeue()).toBe(1);
         expect(queue.size()).toBe(0);
+
         queue.enqueue(1);
         queue.enqueue(2);
         queue.enqueue(3);
@@ -101,29 +120,33 @@ describe('queue is', () => {
         expect(queue.size()).toBe(4);
         expect(queue.dequeue()).toBe(1);
         expect(queue.size()).toBe(3);
+        expect(queue.dequeue()).toBe(2);
+        expect(queue.dequeue()).toBe(3);
+        expect(queue.dequeue()).toBe(4);
+        expect(queue.size()).toBe(0);
     })
 
     test('possible to get size', () => {
         const queue = new Queue();
         queue.enqueue(1);
         expect(queue.size()).toBe(1);
+
         queue.enqueue(2);
         expect(queue.size()).toBe(2);
     })
 })
 
-describe.skip('Node can', () => {
-    
-    test('not empty', () => {
+describe('Node can', () => {
+
+    test('not be empty', () => {
         const node = new Node();
         expect(node).not.toBeNull();
-        expect(node.getValue()).toBe(null);
+        expect(node.getValue()).toBe(undefined);
     })
 
 
-    test('has next', () => {
+    test('have next', () => {
         const node = new Node(1);
-
         const newNode = new Node(2);
 
         node.setNext(newNode);
