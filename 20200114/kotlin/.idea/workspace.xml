@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d8fd7a7f-1dac-4ae9-b40d-d2786d9ec829" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/kotlin.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Script" />
+        <option value="Kotlin Worksheet" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1WMl8dgMEwylSL79ZhsBj7F73X1" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
+    <property name="settings.editor.selected.configurable" value="project.kotlinCompiler" />
+  </component>
+  <component name="RunManager" selected="Gradle.SolutionTest.Find How much should call collatz function to get number one">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SolutionTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;helloworld.SolutionTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="SolutionTest.Find How much should call collatz function to get number one" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;helloworld.SolutionTest.Find How much should call collatz function to get number one&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="kotlin.AppKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+      <module name="kotlin.main" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="kotlin.AppKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.SolutionTest.Find How much should call collatz function to get number one" />
+        <item itemvalue="Gradle.SolutionTest" />
+        <item itemvalue="Kotlin.kotlin.AppKt" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d8fd7a7f-1dac-4ae9-b40d-d2786d9ec829" name="Default Changelist" comment="" />
+      <created>1578967187073</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1578967187073</updated>
+      <workItem from="1578967190997" duration="3907000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="99" y="124" width="1480" height="736" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1578971071613">
+      <screen x="0" y="23" width="1680" height="936" />
+    </state>
+    <state x="99" y="124" width="1480" height="736" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.23.1680.936@0.23.1680.936" timestamp="1578971071613" />
+    <state width="1638" height="250" key="GridCell.Tab.0.bottom" timestamp="1578971963317">
+      <screen x="0" y="23" width="1680" height="937" />
+    </state>
+    <state width="1638" height="250" key="GridCell.Tab.0.bottom/0.23.1680.936@0.23.1680.936" timestamp="1578971633799" />
+    <state width="1638" height="250" key="GridCell.Tab.0.bottom/0.23.1680.937@0.23.1680.937" timestamp="1578971963317" />
+    <state width="1638" height="250" key="GridCell.Tab.0.center" timestamp="1578971963316">
+      <screen x="0" y="23" width="1680" height="937" />
+    </state>
+    <state width="1638" height="250" key="GridCell.Tab.0.center/0.23.1680.936@0.23.1680.936" timestamp="1578971633798" />
+    <state width="1638" height="250" key="GridCell.Tab.0.center/0.23.1680.937@0.23.1680.937" timestamp="1578971963316" />
+    <state width="1638" height="250" key="GridCell.Tab.0.left" timestamp="1578971963315">
+      <screen x="0" y="23" width="1680" height="937" />
+    </state>
+    <state width="1638" height="250" key="GridCell.Tab.0.left/0.23.1680.936@0.23.1680.936" timestamp="1578971633797" />
+    <state width="1638" height="250" key="GridCell.Tab.0.left/0.23.1680.937@0.23.1680.937" timestamp="1578971963315" />
+    <state width="1638" height="250" key="GridCell.Tab.0.right" timestamp="1578971963316">
+      <screen x="0" y="23" width="1680" height="937" />
+    </state>
+    <state width="1638" height="250" key="GridCell.Tab.0.right/0.23.1680.936@0.23.1680.936" timestamp="1578971633798" />
+    <state width="1638" height="250" key="GridCell.Tab.0.right/0.23.1680.937@0.23.1680.937" timestamp="1578971963316" />
+    <state x="473" y="131" key="SettingsEditor" timestamp="1578968895471">
+      <screen x="0" y="23" width="1680" height="936" />
+    </state>
+    <state x="473" y="131" key="SettingsEditor/0.23.1680.936@0.23.1680.936" timestamp="1578968895471" />
+    <state x="0" y="624" key="com.intellij.ide.util.TipDialog" timestamp="1578967192278">
+      <screen x="0" y="23" width="1680" height="936" />
+    </state>
+    <state x="0" y="624" key="com.intellij.ide.util.TipDialog/0.23.1680.936@0.23.1680.936" timestamp="1578967192278" />
+    <state x="629" y="415" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1578968955938">
+      <screen x="0" y="23" width="1680" height="936" />
+    </state>
+    <state x="629" y="415" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1680.936@0.23.1680.936" timestamp="1578968955938" />
+  </component>
+</project>
