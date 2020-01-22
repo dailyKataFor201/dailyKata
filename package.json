@@ -1,0 +1,24 @@
+{
+  "name": "dailyKata",
+  "version": "1.0.0",
+  "description": "this is for recording that I studied about various algorithm and practicing git",
+  "main": "index.js",
+  "dependencies": {
+    "jest": "^24.9.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://2Zero1@github.com/2Zero1/dailyKata.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/2Zero1/dailyKata/issues"
+  },
+  "homepage": "https://github.com/2Zero1/dailyKata#readme"
+}
