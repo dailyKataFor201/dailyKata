@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_min-max.test" default="compile.module.min-max.test">
+  <dirname property="module.min-max.test.basedir" file="${ant.file.module_min-max.test}"/>
+  
+  <property name="module.jdk.home.min-max.test" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.min-max.test" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.min-max.test" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.min-max.test" value="-encoding UTF-8 -source 11 -target 11 ${compiler.args}"/>
+  
+  <property name="min-max.test.output.dir" value="undefined"/>
+  <property name="min-max.test.testoutput.dir" value="${module.min-max.test.basedir}/../../build/classes/java/test"/>
+  
+  <path id="min-max.test.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="min-max.test.module.production.classpath">
+    <path refid="${module.jdk.classpath.min-max.test}"/>
+    <pathelement location="${min-max.main.output.dir}"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-test-junit:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-test:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-test-common:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-test-annotations-common:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-common:1.3.41.classpath"/>
+    <path refid="library.gradle:_junit:junit:4.12.classpath"/>
+    <path refid="library.gradle:_org.jetbrains:annotations:13.0.classpath"/>
+    <path refid="library.gradle:_org.hamcrest:hamcrest-core:1.3.classpath"/>
+  </path>
+  
+  <path id="min-max.test.runtime.production.module.classpath">
+    <path refid="min-max.main.runtime.production.module.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-test-junit:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-test:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-test-common:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-test-annotations-common:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-common:1.3.41.classpath"/>
+    <path refid="library.gradle:_junit:junit:4.12.classpath"/>
+    <path refid="library.gradle:_org.jetbrains:annotations:13.0.classpath"/>
+    <path refid="library.gradle:_org.hamcrest:hamcrest-core:1.3.classpath"/>
+  </path>
+  
+  <path id="min-max.test.module.classpath">
+    <path refid="${module.jdk.classpath.min-max.test}"/>
+    <pathelement location="${min-max.main.output.dir}"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-test-junit:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-test:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-test-common:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-test-annotations-common:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-common:1.3.41.classpath"/>
+    <path refid="library.gradle:_junit:junit:4.12.classpath"/>
+    <path refid="library.gradle:_org.jetbrains:annotations:13.0.classpath"/>
+    <path refid="library.gradle:_org.hamcrest:hamcrest-core:1.3.classpath"/>
+  </path>
+  
+  <path id="min-max.test.runtime.module.classpath">
+    <pathelement location="${min-max.test.testoutput.dir}"/>
+    <path refid="min-max.main.runtime.module.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-test-junit:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-test:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-test-common:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-test-annotations-common:1.3.41.classpath"/>
+    <path refid="library.gradle:_org.jetbrains.kotlin:kotlin-stdlib-common:1.3.41.classpath"/>
+    <path refid="library.gradle:_junit:junit:4.12.classpath"/>
+    <path refid="library.gradle:_org.jetbrains:annotations:13.0.classpath"/>
+    <path refid="library.gradle:_org.hamcrest:hamcrest-core:1.3.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.min-max.test">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.min-max.test">
+    <patternset refid="excluded.from.module.min-max.test"/>
+  </patternset>
+  
+  <path id="min-max.test.module.test.sourcepath">
+    <dirset dir="${module.min-max.test.basedir}/../../src/test">
+      <include name="kotlin"/>
+      <include name="resources"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.min-max.test" depends="compile.module.min-max.test.production,compile.module.min-max.test.tests" description="Compile module min-max.test"/>
+  
+  <target name="compile.module.min-max.test.production" depends="register.custom.compilers,compile.module.min-max.main" description="Compile module min-max.test; production classes"/>
+  
+  <target name="compile.module.min-max.test.tests" depends="register.custom.compilers,compile.module.min-max.test.production" description="compile module min-max.test; test classes" unless="skip.tests">
+    <mkdir dir="${min-max.test.testoutput.dir}"/>
+    <javac2 destdir="${min-max.test.testoutput.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.min-max.test}/javac">
+      <compilerarg line="${compiler.args.min-max.test}"/>
+      <bootclasspath refid="min-max.test.module.bootclasspath"/>
+      <classpath refid="min-max.test.module.classpath"/>
+      <src refid="min-max.test.module.test.sourcepath"/>
+      <patternset refid="excluded.from.compilation.min-max.test"/>
+    </javac2>
+    
+    <copy todir="${min-max.test.testoutput.dir}">
+      <fileset dir="${module.min-max.test.basedir}/../../src/test/kotlin">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.min-max.test.basedir}/../../src/test/resources">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="clean.module.min-max.test" description="cleanup module">
+    <delete dir="${min-max.test.output.dir}"/>
+    <delete dir="${min-max.test.testoutput.dir}"/>
+  </target>
+</project>

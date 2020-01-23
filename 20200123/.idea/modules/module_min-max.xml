@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_min-max" default="compile.module.min-max">
+  <dirname property="module.min-max.basedir" file="${ant.file.module_min-max}"/>
+  
+  <property name="module.jdk.home.min-max" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.min-max" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.min-max" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.min-max" value="-encoding UTF-8 -source 11 -target 11 ${compiler.args}"/>
+  
+  <property name="min-max.output.dir" value="undefined"/>
+  <property name="min-max.testoutput.dir" value="undefined"/>
+  
+  <path id="min-max.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="min-max.module.production.classpath">
+    <path refid="${module.jdk.classpath.min-max}"/>
+  </path>
+  
+  <path id="min-max.runtime.production.module.classpath"/>
+  
+  <path id="min-max.module.classpath">
+    <path refid="${module.jdk.classpath.min-max}"/>
+  </path>
+  
+  <path id="min-max.runtime.module.classpath"/>
+  
+  
+  <patternset id="excluded.from.module.min-max">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.min-max">
+    <patternset refid="excluded.from.module.min-max"/>
+  </patternset>
+  
+  
+  <target name="compile.module.min-max" depends="compile.module.min-max.production,compile.module.min-max.tests" description="Compile module min-max"/>
+  
+  <target name="compile.module.min-max.production" depends="register.custom.compilers" description="Compile module min-max; production classes"/>
+  
+  <target name="compile.module.min-max.tests" depends="register.custom.compilers,compile.module.min-max.production" description="compile module min-max; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.min-max" description="cleanup module">
+    <delete dir="${min-max.output.dir}"/>
+    <delete dir="${min-max.testoutput.dir}"/>
+  </target>
+</project>
