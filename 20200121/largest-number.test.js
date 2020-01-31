@@ -3,12 +3,26 @@
     - 이어 붙힌다.
     - 0이 아니면 값을 리턴한다.
 */
+function Person(name, gender) {
+    this.name = name;
+    this.gender = gender;
+}
+function Student(name, gender, school) {
+    console.log(this)
+    Person.call(this,name,gender);
+    console.log(this)
+    this.school = school;
+}
+function Employee(name, gender, company) {
+    Person.apply(this, [name, gender]);
+    this.company = company;
+}
 
-const getLargestNumber = (arr) => arr.sort(compare)[0] === 0 ? 0 : arr.sort(compare).join('');
-
-const compare = (a, b) => a+""+b > b+""+a ? -1 : 1
-
+var by = new Student('보영', 'female', '단국대');
+var jn = new Employee('재난','male', '구골')
+// console.log(by)
 test('getLargestNumber', () => {
+   
     expect(getLargestNumber([6, 10, 2])).toBe("6210");
     expect(getLargestNumber([3, 30, 34, 5, 9])).toBe("9534330");
 })
