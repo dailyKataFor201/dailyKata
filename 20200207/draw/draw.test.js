@@ -14,33 +14,9 @@ const solution = (n,a,b) => {
         target_b = next(target_b);
     }
     return round;
-    if(target_a == target_b) {
-        return round;
-    }
-    round++;
-
-    target_a = next(target_a);
-    target_b = next(target_b);
-
-    if(target_a == target_b) {
-        return round;
-    }
-    round++;
-
-    target_a = next(target_a);
-    target_b = next(target_b);
-
-    if(target_a == target_b) {
-        return round;
-    }
-    round++;
-    
-    
 }
 
 const next = (a) => Math.ceil(a/2);
-const greater = (a, b) => a - b > 0 ? a : b
-const less = (a, b) => a - b < 0 ? a : b
 
 test('solution', () => {
     expect(solution(2,1,2)).toBe(1);
@@ -54,9 +30,3 @@ test('solution', () => {
     expect(solution(8,7,4)).toBe(3);
     expect(solution(8,1,5)).toBe(3);
 })
-
-//1 2 3 4 5 6 7 8
-
-// 1   3   5   7
-
-//   1       5
