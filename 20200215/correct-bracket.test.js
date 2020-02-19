@@ -18,7 +18,6 @@ const solution = (brackets) => {
         return true;
     }
     return false;
-
 }
 
 
